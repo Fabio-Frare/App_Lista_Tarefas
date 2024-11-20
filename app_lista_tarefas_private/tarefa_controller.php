@@ -4,10 +4,10 @@ require "../app_lista_tarefas_private/tarefa.model.php";
 require "../app_lista_tarefas_private/tarefa.service.php";
 require "../app_lista_tarefas_private/conexao.php";
 
+
 $acao = isset($_GET['acao']) ? $_GET['acao'] : $acao;
 
-if( $acao == 'inserir' ) {
-
+if($acao == 'inserir' ) {
     $tarefa = new Tarefa();
     $tarefa->__set('tarefa', $_POST['tarefa']);
 
@@ -18,14 +18,28 @@ if( $acao == 'inserir' ) {
 
     header('Location: nova_tarefa.php?inclusao=1');
 
-} else if( $acao = 'recuperar' ) {
-
-    $tarefa  = new tarefa();
+} else if($acao == 'recuperar') {
+    
+    $tarefa  = new Tarefa();
     $conexao = new Conexao();
 
     $tarefaService = new TarefaService($conexao, $tarefa);
-    $tarefas = $tarefaService->recuperar();
-}
+    $tarefas       = $tarefaService->recuperar();
 
+} else if($acao == 'atualizar') {
+
+    $tarefa = new Tarefa();
+    $tarefa->__set('id', $_POST['id']);
+    $tarefa->__set('tarefa', $_POST['tarefa']);
+
+    $conexao = new Conexao();
+
+    $tarefaService = new TarefaService($conexao, $tarefa);
+    if($tarefaService->atualizar()) {
+        header('location: todas_tarefas.php');
+    }
+
+
+}
 
 ?>
