@@ -11,15 +11,15 @@ Construção de um site para controle de tarefas utilizando Bootstrap 4 e PHP co
 
 >Figura 1: Tarefas pendentes
 
-![Tarefas pendentes](App_lista_tarefas_public/img/tarefas_pendentes.png)
+![Tarefas pendentes](app_lista_tarefas_public/img/Tarefas_pendentes.png)
 
  
 >Figura 2: Cadastro de uma nova tarefa
 
-![Cadastro de uma nova tarefa](App_lista_tarefas_public/img/Nova_tarefa.png)
+![Cadastro de uma nova tarefa](app_lista_tarefas_public/img/Nova_tarefa.png)
 
 >Figura 3: Lista de todas as tarefas
 
-![Lista de todas as tarefas](App_lista_tarefas_public/img/Todas_tarefas.png)
+![Lista de todas as tarefas](app_lista_tarefas_public/img/Todas_tarefas.png)
 
  
